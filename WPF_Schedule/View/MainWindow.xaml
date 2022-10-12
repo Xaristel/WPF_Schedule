@@ -1,0 +1,118 @@
+﻿<Window x:Name="mainWindow" x:Class="WPF_Schedule.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Schedule"
+        mc:Ignorable="d"
+        Title="WPF_Schedule" 
+        Height="370" 
+        Width="565" 
+        FontSize="14">
+    <Grid>
+        <ComboBox x:Name="comboBox_City" 
+                  HorizontalAlignment="Left" 
+                  Margin="210,51,0,0" 
+                  VerticalAlignment="Top" 
+                  Width="260" 
+                  FontSize="16"/>
+
+        <ComboBox x:Name="comboBox_Shop" 
+                  HorizontalAlignment="Left" 
+                  Margin="210,101,0,0" 
+                  VerticalAlignment="Top" 
+                  Width="260" 
+                  FontSize="16"/>
+
+        <ComboBox x:Name="comboBox_Employee" 
+                  HorizontalAlignment="Left" 
+                  Margin="210,151,0,0" 
+                  VerticalAlignment="Top" 
+                  Width="260" 
+                  FontSize="16"/>
+
+        <ComboBox x:Name="comboBox_Brigade" 
+                  HorizontalAlignment="Left" 
+                  Margin="210,201,0,0" 
+                  VerticalAlignment="Top" 
+                  Width="260" 
+                  FontSize="16"/>
+
+        <TextBox x:Name="textBox_Shift" 
+                 HorizontalAlignment="Left" 
+                 Margin="210,251,0,0" 
+                 TextWrapping="Wrap" 
+                 Text="TextBox" 
+                 VerticalAlignment="Top" 
+                 Width="260" 
+                 Height="25" 
+                 FontSize="16"/>
+
+        <Button x:Name="button_Save" 
+                Content="Сохранить" 
+                HorizontalAlignment="Center" 
+                Margin="0,300,0,0" 
+                VerticalAlignment="Top" 
+                Width="260" 
+                Height="33" 
+                FontWeight="Bold" 
+                FontSize="18"/>
+
+        <Label x:Name="label_Header" 
+               Content="Введите значения" 
+               HorizontalAlignment="Center" 
+               Margin="0,2,0,0" 
+               VerticalAlignment="Top" 
+               FontWeight="Bold" 
+               FontSize="24"/>
+
+        <Label Content="Город:" 
+               Margin="96,51,0,0" 
+               VerticalAlignment="Top" 
+               Height="25" Width="109" 
+               HorizontalAlignment="Left" 
+               Padding="0,0,0,0" 
+               FontSize="18" 
+               FontWeight="Bold"/>
+
+        <Label Content="Цех:" 
+               Margin="96,101,0,0" 
+               VerticalAlignment="Top" 
+               Height="25" Width="109" 
+               HorizontalAlignment="Left" 
+               Padding="0,0,0,0" 
+               FontSize="18" 
+               FontWeight="Bold"/>
+
+        <Label Content="Сотрудник:" 
+               Margin="96,153,0,0" 
+               VerticalAlignment="Top" 
+               Height="25" 
+               Width="109" 
+               HorizontalAlignment="Left" 
+               Padding="0,0,0,0" 
+               FontSize="18" 
+               FontWeight="Bold"/>
+
+        <Label Content="Бригада:" 
+               Margin="96,200,0,0" 
+               VerticalAlignment="Top" 
+               Height="25" 
+               Width="109" 
+               HorizontalAlignment="Left" 
+               Padding="0,0,0,0" 
+               FontSize="18" 
+               FontWeight="Bold"/>
+
+        <Label Content="Смена:" 
+               Margin="96,251,0,0" 
+               VerticalAlignment="Top" 
+               Height="25" 
+               Width="109" 
+               HorizontalAlignment="Left" 
+               Padding="0,0,0,0" 
+               FontSize="18" 
+               FontWeight="Bold"/>
+
+    </Grid>
+</Window>
