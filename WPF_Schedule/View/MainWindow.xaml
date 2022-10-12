@@ -4,9 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Schedule"
+        xmlns:viewmodel="clr-namespace:WPF_Schedule.ViewModel" 
+        d:DataContext="{d:DesignInstance Type=viewmodel:ScheduleVIewModel}"
         mc:Ignorable="d"
         Title="WPF_Schedule" 
-        Height="370" 
+        Height="390" 
         Width="565" 
         FontSize="14">
     <Grid>
@@ -15,38 +17,49 @@
                   Margin="210,51,0,0" 
                   VerticalAlignment="Top" 
                   Width="260" 
-                  FontSize="16"/>
+                  FontSize="16"
+                  ItemsSource="{Binding CitiesList, Mode=OneWay}"
+                  SelectedItem="{Binding City, Mode=TwoWay}" />
 
         <ComboBox x:Name="comboBox_Shop" 
                   HorizontalAlignment="Left" 
                   Margin="210,101,0,0" 
                   VerticalAlignment="Top" 
                   Width="260" 
-                  FontSize="16"/>
+                  FontSize="16"
+                  ItemsSource="{Binding ShopsList, Mode=OneWay}"
+                  SelectedItem="{Binding Shop, Mode=TwoWay}" />
 
         <ComboBox x:Name="comboBox_Employee" 
                   HorizontalAlignment="Left" 
                   Margin="210,151,0,0" 
                   VerticalAlignment="Top" 
                   Width="260" 
-                  FontSize="16"/>
+                  FontSize="16"
+                  ItemsSource="{Binding EmployeesList, Mode=OneWay}"
+                  SelectedItem="{Binding Employee, Mode=TwoWay}" />
 
-        <ComboBox x:Name="comboBox_Brigade" 
-                  HorizontalAlignment="Left" 
-                  Margin="210,201,0,0" 
-                  VerticalAlignment="Top" 
-                  Width="260" 
-                  FontSize="16"/>
+        <TextBox x:Name="textBox_Brigade" 
+                 HorizontalAlignment="Left" 
+                 Margin="210,201,0,0" 
+                 TextWrapping="Wrap" 
+                 Text="{Binding Brigade, Mode=TwoWay}" 
+                 VerticalAlignment="Top" 
+                 Width="260" 
+                 Height="25" 
+                 FontSize="16"
+                 IsReadOnly="True"/>
 
         <TextBox x:Name="textBox_Shift" 
                  HorizontalAlignment="Left" 
                  Margin="210,251,0,0" 
                  TextWrapping="Wrap" 
-                 Text="TextBox" 
+                 Text="{Binding Shift, Mode=TwoWay}" 
                  VerticalAlignment="Top" 
                  Width="260" 
                  Height="25" 
-                 FontSize="16"/>
+                 FontSize="16"
+                 IsReadOnly="True"/>
 
         <Button x:Name="button_Save" 
                 Content="Сохранить" 
@@ -56,7 +69,8 @@
                 Width="260" 
                 Height="33" 
                 FontWeight="Bold" 
-                FontSize="18"/>
+                FontSize="18"
+                Command="{Binding SaveCommand}"/>
 
         <Label x:Name="label_Header" 
                Content="Введите значения" 
